@@ -9,12 +9,11 @@ RUN apt-get update && apt-get install -y \
         libbz2-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
-        libmcrypt-dev \
         libpng-dev \
         libcurl4-openssl-dev libpcre3-dev \
         libpq5 libpq-dev \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
-    && docker-php-ext-install bz2 calendar curl exif gd gettext mbstring mcrypt mysqli pdo pdo_mysql pgsql pdo_pgsql sockets zip \
+    && docker-php-ext-install bz2 calendar curl exif gd gettext mbstring mysqli pdo pdo_mysql pgsql pdo_pgsql sockets zip \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && pecl install igbinary \

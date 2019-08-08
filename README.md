@@ -24,22 +24,42 @@ These images are based on the php official image, with these modules added:
 
 Also [phpunit](https://phpunit.de/) and [composer](https://getcomposer.org/) are installed by default.
 
-# php 5.6
+## php 5.6
+
+* xdebug 2.5.5
+* igbinary 2.0.8
+* php redis 4.3.0
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php5.6.Dockerfile)
 
-# php 7.0
+## php 7.0
+
+* xdebug 2.6.1
+* igbinary (latest)
+* php redis (latest)
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.0.Dockerfile)
 
-# php 7.1
+## php 7.1
+
+* xdebug 2.7.2
+* igbinary (latest)
+* php redis (latest)
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.1.Dockerfile)
 
-# php 7.2
+## php 7.2
+
+* xdebug 2.7.2
+* igbinary (latest)
+* php redis (latest)
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.2.Dockerfile)
 
-# php 7.3
+## php 7.3
+
+* xdebug 2.7.2
+* igbinary (latest)
+* php redis (latest)
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.3.Dockerfile)

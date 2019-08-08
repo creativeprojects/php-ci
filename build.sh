@@ -1,8 +1,7 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-ci
-# image_versions="5.6 7.0 7.1 7.2 7.3"
-image_versions="5.6"
+image_versions="5.6 7.0 7.1 7.2 7.3"
 
 cd $(dirname "${0}")
 
@@ -14,10 +13,12 @@ for image_version in ${image_versions}; do
     docker rmi ${image_name}:latest
 
     echo Building image ${image_name}:${image_version}
-    docker build -t ${image_name}:${image_version} \
-                 -t ${image_name}:latest \
-                 -f php${image_version}.Dockerfile \
-                 ./
+    docker build \
+        --build-arg http_proxy=${http_proxy} \
+        -t ${image_name}:${image_version} \
+        -t ${image_name}:latest \
+        -f php${image_version}.Dockerfile \
+        ./
 
     echo Pushing image ${image_name}:${image_version}
     docker push ${image_name}:${image_version}

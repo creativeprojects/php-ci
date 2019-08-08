@@ -3,9 +3,9 @@ FROM php:5.6
 LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
       version="5.6"
 
-RUN http_proxy=$http_proxy apt-get update \
-    && http_proxy=$http_proxy apt-get upgrade -y \
-    && http_proxy=$http_proxy apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
         git \
         mysql-client \
         libbz2-dev libzip-dev \

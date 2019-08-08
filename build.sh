@@ -1,11 +1,10 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-ci
-image_versions="5.6 7.0 7.1 7.2"
+# image_versions="5.6 7.0 7.1 7.2 7.3"
+image_versions="5.6"
 
 cd $(dirname "${0}")
-
-git pull
 
 for image_version in ${image_versions}; do
     echo Downloading php:${image_version}
@@ -17,7 +16,7 @@ for image_version in ${image_versions}; do
     echo Building image ${image_name}:${image_version}
     docker build -t ${image_name}:${image_version} \
                  -t ${image_name}:latest \
-                 -f Dockerfile-php${image_version} \
+                 -f php${image_version}.Dockerfile \
                  ./
 
     echo Pushing image ${image_name}:${image_version}

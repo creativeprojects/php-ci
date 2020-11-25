@@ -16,7 +16,7 @@ RUN apt-get update \
         libpq5 libpq-dev \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
     && docker-php-ext-install bz2 calendar curl exif gd gettext mbstring mysqli pdo pdo_mysql pgsql pdo_pgsql sockets zip \
-    && pecl install xdebug-2.7.2 \
+    && pecl install xdebug-2.9.8 \
     && docker-php-ext-enable xdebug \
     && pecl install igbinary \
     && printf "yes\n" | pecl install redis \

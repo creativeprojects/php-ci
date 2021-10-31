@@ -34,3 +34,4 @@ RUN apt-get update \
     && chmod +x /usr/local/bin/composer
 
 COPY ext-*.ini /usr/local/etc/php/conf.d/
+COPY xdebug.ini /etc/php/7.4/cli/conf.d/30-xdebug.ini

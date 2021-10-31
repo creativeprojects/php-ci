@@ -1,7 +1,7 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-ci
-image_versions="5.6 7.0 7.1 7.2 7.3"
+image_versions="5.6 7.3 7.4"
 
 cd $(dirname "${0}")
 

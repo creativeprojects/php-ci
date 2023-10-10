@@ -63,3 +63,19 @@ Also [phpunit](https://phpunit.de/) and [composer](https://getcomposer.org/) are
 * php redis (latest)
 
 [Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.3.Dockerfile)
+
+## php 7.4
+
+* xdebug 3.1.1
+* igbinary (latest)
+* php redis (latest)
+
+[Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php7.4.Dockerfile)
+
+## php 8.2
+
+* xdebug 3.2.2
+* igbinary (latest)
+* php redis (latest)
+
+[Dockerfile](https://github.com/creativeprojects/php-ci/blob/master/php8.2.Dockerfile)

@@ -17,6 +17,7 @@ RUN apt-get update \
         libcurl4-openssl-dev libpcre3-dev \
         libpq5 libpq-dev \
         libonig5 libonig-dev \
+        gnupg \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install bz2 calendar exif gd gettext mbstring mysqli pdo_mysql pgsql pdo_pgsql sockets zip \
     && pecl install xdebug-3.2.2 \

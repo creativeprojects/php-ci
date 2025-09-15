@@ -1,13 +1,13 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-ci
-image_versions="8.2"
+image_versions="8.2 8.4"
 
 cd "$(dirname "${0}")" || exit
 
 for image_version in ${image_versions}; do
     echo "Downloading php:${image_version}"
-    docker "pull php:${image_version}"
+    docker pull "php:${image_version}"
 
     docker rmi "${image_name}:${image_version}"
     docker rmi "${image_name}:latest"

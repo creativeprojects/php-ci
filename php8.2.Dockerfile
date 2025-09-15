@@ -20,7 +20,7 @@ RUN apt-get update \
         gnupg \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install bz2 calendar exif gd gettext mbstring mysqli pdo_mysql pgsql pdo_pgsql sockets zip \
-    && pecl install xdebug-3.2.2 \
+    && pecl install xdebug-3.4.5 \
     && docker-php-ext-enable xdebug \
     && pecl install igbinary \
     && printf "yes\n" | pecl install redis \

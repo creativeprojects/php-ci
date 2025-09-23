@@ -32,7 +32,8 @@ RUN apt-get update \
     && curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar \
     && chmod +x /usr/local/bin/phpunit \
     && curl --silent --show-error https://getcomposer.org/installer | http_proxy='' php -- --install-dir="/usr/local/bin" --filename="composer" \
-    && chmod +x /usr/local/bin/composer
+    && chmod +x /usr/local/bin/composer \
+    && echo "memory_limit=-1" > /usr/local/etc/php/conf.d/memory.ini
 
 COPY ext-*.ini /usr/local/etc/php/conf.d/
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini

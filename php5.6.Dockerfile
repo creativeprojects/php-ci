@@ -1,8 +1,5 @@
 FROM php:5.6
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="5.6"
-
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \

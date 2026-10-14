@@ -1,8 +1,5 @@
 FROM php:7.4
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="7.4"
-
 VOLUME /tmp/xdebug
 
 RUN apt-get update \

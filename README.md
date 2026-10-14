@@ -74,7 +74,7 @@ Also [phpunit](https://phpunit.de/) and [composer](https://getcomposer.org/) are
 
 ## php 8.2 based on debian bookworm
 
-* xdebug 3.4.5
+* xdebug 3.5.3
 * igbinary (latest)
 * php redis (latest)
 
@@ -82,7 +82,7 @@ Also [phpunit](https://phpunit.de/) and [composer](https://getcomposer.org/) are
 
 ## php 8.4 based on debian trixie
 
-* xdebug 3.4.5
+* xdebug 3.5.3
 * igbinary (latest)
 * php redis (latest)
 

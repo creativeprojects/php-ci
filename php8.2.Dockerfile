@@ -1,8 +1,5 @@
 FROM php:8.2-bookworm
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="8.2"
-
 VOLUME /tmp/xdebug
 
 RUN apt-get update \

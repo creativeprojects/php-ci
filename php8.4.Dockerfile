@@ -1,8 +1,5 @@
 FROM php:8.4-trixie
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="8.4"
-
 VOLUME /tmp/xdebug
 
 RUN apt-get update \

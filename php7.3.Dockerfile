@@ -1,8 +1,5 @@
 FROM php:7.3
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="7.3"
-
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \

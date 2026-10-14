@@ -6,19 +6,14 @@ image_versions="8.2 8.4"
 cd "$(dirname "${0}")" || exit
 
 for image_version in ${image_versions}; do
-    echo "Downloading php:${image_version}"
-    docker pull "php:${image_version}"
-
-    docker rmi "${image_name}:${image_version}"
-    docker rmi "${image_name}:latest"
-
     echo "Building image ${image_name}:${image_version}"
-    docker build \
+    docker buildx build \
         --pull \
-        --build-arg "http_proxy=${http_proxy}" \
-        -t "${image_name}:${image_version}" \
-        -t "${image_name}:latest" \
-        -f "php${image_version}.Dockerfile" \
+        --file "php${image_version}.Dockerfile" \
+        --platform linux/amd64,linux/arm64 \
+        --tag "${image_name}:${image_version}" \
+        --tag "${image_name}:latest" \
+        --push \
         ./
 
     echo Pushing image "${image_name}:${image_version}"

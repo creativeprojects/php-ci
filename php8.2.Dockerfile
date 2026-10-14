@@ -20,7 +20,7 @@ RUN apt-get update \
         gnupg \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install bz2 calendar exif gd gettext mbstring mysqli pdo_mysql pgsql pdo_pgsql sockets zip \
-    && pecl install xdebug-3.4.5 \
+    && pecl install xdebug-3.5.3 \
     && docker-php-ext-enable xdebug \
     && pecl install igbinary \
     && printf "yes\n" | pecl install redis \
@@ -32,8 +32,6 @@ RUN apt-get update \
     && curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar \
     && chmod +x /usr/local/bin/phpunit \
     && curl --silent --show-error https://getcomposer.org/installer | http_proxy='' php -- --install-dir="/usr/local/bin" --filename="composer" \
-    && chmod +x /usr/local/bin/composer \
-    && echo "memory_limit=-1" > /usr/local/etc/php/conf.d/memory.ini
+    && chmod +x /usr/local/bin/composer
 
-COPY ext-*.ini /usr/local/etc/php/conf.d/
-COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+COPY *.ini /usr/local/etc/php/conf.d/

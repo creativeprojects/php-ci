@@ -14,11 +14,5 @@ for image_version in ${image_versions}; do
         --tag "${image_name}:${image_version}" \
         --tag "${image_name}:latest" \
         --push \
-        ./
-
-    echo Pushing image "${image_name}:${image_version}"
-    docker push "${image_name}:${image_version}"
-
-    echo Pushing image "${image_name}:latest"
-    docker push "${image_name}:latest"
+        .
 done
